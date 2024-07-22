@@ -122,7 +122,7 @@
 }
 
 .contact-container {
-  max-width: 100%;
+  max-width: 70%;
   margin: 0 auto;
   padding: 2rem;
   background-color: grey;
@@ -137,8 +137,10 @@
 }
 
 .contact-container p {
-  margin-bottom: 2rem;
-  color: #777;
+  font-size: 1.3rem;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 1rem;
+  color: lightseagreen;
 }
 
 .form-group {
