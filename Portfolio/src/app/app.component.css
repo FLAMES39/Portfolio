@@ -1,151 +1,85 @@
-/* General Styles */
-body {
-    font-family: 'Helvetica Neue', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #f5f5f5;
-    color: grey;
-  }
-  
-  .container {
-    /* width: 100%; */
-    /* max-width: 1200px; */
-    margin: 0 auto;
-    padding: 10px;
-    background-color: dimgray;
-  }
-  
-  /* Header and Navigation */
-  header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0px;
-    
-  }
-/* Profile Image */
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container Styles */
+.container {
+  width: 100%;
+  background-color: #555;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Profile Styles */
 .profile {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+.profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profile h1 {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+/* Navigation Styles */
+nav .nav-list {
+  list-style: none;
+  display: flex;
+}
+
+nav .nav-list li {
+  margin-left: 1.5rem;
+}
+
+nav .nav-list li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+nav .nav-list li a.active {
+  color: red;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  nav .nav-list {
+    flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    
   }
-  
-  .profile img {
-    width: 60px; /* Adjust the size as needed */
-    height: 60px; /* Adjust the size as needed */
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  
-  .nav-list {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .nav-list li {
-    margin: 0 15px;
-  }
-  
-  .nav-list li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 22px;
-    transition: color 0.3s;
-  }
-  
-  .nav-list li a:hover,
-  .nav-list li a.active {
-    color: red;
-  }
-  
- 
-  
-  .text-content p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #666;
-  }
-  
-  .social-links {
-    margin-top: 20px;
-  }
-  
-  .social-links a {
-    margin-right: 15px;
-    font-size: 1.5rem;
-    color: #666;
-    transition: color 0.3s;
-  }
-  
-  .social-links a:hover {
-    color: #00bfa5;
-  }
-  
-  /* Image Content */
-  .image-content {
-    flex: 1 1 400px;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-  }
-  
-  .image-content img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .main-content {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-  
-    .text-content, .image-content {
-      padding: 10px;
-    }
-  
-    .text-content {
-      order: 2;
-    }
-  
-    .image-content {
-      order: 1;
-    }
-  }
-  
 
-
-  @media (max-width: 768px) {
-    .nav-list {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      background-color: #333;
-      padding: 10px 0;
-    }
-
+  nav .nav-list li {
+    margin-left: 0;
+    margin-top: 1rem;
   }
-  
+}
 
+@media (max-width: 480px) {
+  .profile h1 {
+    font-size: 1.2rem;
+  }
 
-
-  
-
-
-
-
-
-
-  
+  nav .nav-list li a {
+    font-size: 0.9rem;
+  }
+}

@@ -28,7 +28,7 @@
   .footer-section {
     flex: 1;
     min-width: 200px; 
-    padding: 0 15px; 
+    /* padding: 0 15px;  */
   }
   
   .footer-section h3 {
