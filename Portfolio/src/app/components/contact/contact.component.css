@@ -1,5 +1,12 @@
 
-
+.footer {
+  background: lightgrey; 
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 60px 0;
+  font-size: 14px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); 
+}
 
 .contact-button {
   background-color: #e74c3c;
@@ -21,7 +28,7 @@
   max-width: 70%;
   margin: 0 auto;
   padding: 2rem;
-  background-color: grey;
+  background-color: lightgrey;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   text-align: center;
@@ -59,6 +66,7 @@
 }
 
 .error p {
+  padding-left: 6rem;
   color: red;
   font-size: 1rem;
   width: 100%;

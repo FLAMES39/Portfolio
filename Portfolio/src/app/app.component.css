@@ -7,16 +7,18 @@
 
 /* Container Styles */
 .container {
-  width: 99%;
-  background-color: #555;
+  width: 98vw;
+  background-color: lightgrey;
   position: fixed;
   top: 0;
+  z-index: 1000;
+  
 
 }
 
 /* Header Styles */
 header {
-  
+ 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -41,7 +43,7 @@ header {
   height: 40vh;
 }
 .profile h1 {
-  color: #fff;
+  color: black;
   font-size: 1.5rem;
 }
 
@@ -52,13 +54,13 @@ nav .nav-list {
 }
 
 nav .nav-list li {
-  margin-left: 1.5rem;
+  margin-left: 2rem;
 }
 
 nav .nav-list li a {
   text-decoration: none;
-  color: #fff;
-  font-size: 1rem;
+  color: black;
+  font-size: 1.2rem;
 }
 
 nav .nav-list li a.active {
@@ -92,4 +94,63 @@ nav .nav-list li a.active {
   nav .nav-list li a {
     font-size: 0.9rem;
   }
+}
+
+
+
+.profile-body {
+  position: relative;
+  text-align: center;
+  color: orangered; /* Text color for h1 and p */
+}
+
+.profile-body h1,
+.profile-body p {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.profile-body h1 {
+  top: 20%;
+  font-size: 2.5rem;
+  padding-top: 3rem
+}
+
+.profile-body p {
+  top: 40%;
+  font-size: 3rem;
+  padding-top: 3rem;
+}
+
+.profile-body img {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover; 
+}
+
+/* Typing Animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.typed-text {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 0.15em solid red;
+  white-space: nowrap;
+  animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+}
+.cursor {
+  display: inline-block;
+  width: 10px;
+  /* background-color: red; */
+  margin-left: 2px;
+  animation: blink 0.75s step-end infinite;
 }
