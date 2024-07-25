@@ -7,16 +7,21 @@
 
 /* Container Styles */
 .container {
-  width: 100%;
+  width: 99%;
   background-color: #555;
+  position: fixed;
+  top: 0;
+
 }
 
 /* Header Styles */
 header {
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+
 }
 
 /* Profile Styles */
@@ -31,7 +36,10 @@ header {
   border-radius: 50%;
   margin-right: 10px;
 }
-
+.profile-body img{
+  width: 100%;
+  height: 40vh;
+}
 .profile h1 {
   color: #fff;
   font-size: 1.5rem;
@@ -56,6 +64,8 @@ nav .nav-list li a {
 nav .nav-list li a.active {
   color: red;
 }
+
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
