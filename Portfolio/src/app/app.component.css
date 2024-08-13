@@ -12,18 +12,15 @@
   position: fixed;
   top: 0;
   z-index: 1000;
-  
-
 }
 
 /* Header Styles */
 header {
- 
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
 /* Profile Styles */
@@ -38,19 +35,75 @@ header {
   border-radius: 50%;
   margin-right: 10px;
 }
-.profile-body img{
-  width: 100%;
-  height: 40vh;
-}
+
 .profile h1 {
   color: black;
   font-size: 1.5rem;
+}
+
+.profile-body {
+  position: relative;
+  text-align: center;
+  color: orangered; /* Text color for h1 and p */
+  padding-top: 5rem; /* Ensure it's not hidden under the fixed header */
+}
+
+.profile-body h1,
+.profile-body p {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.profile-body h1 {
+  top: 20%;
+  font-size: 3rem;
+  padding-top: 3rem;
+}
+
+.profile-body p {
+  top: 40%;
+  font-size: 3rem;
+  padding-top: 2rem;
+}
+
+.profile-body img {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+}
+
+/* Typing Animation */
+.typed-text {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 0.15em solid red;
+  white-space: nowrap;
+  animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.cursor {
+  display: inline-block;
+  width: 10px;
+  margin-left: 2px;
+  animation: blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
 }
 
 /* Navigation Styles */
 nav .nav-list {
   list-style: none;
   display: flex;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
 nav .nav-list li {
@@ -67,12 +120,55 @@ nav .nav-list li a.active {
   color: red;
 }
 
-
-
 /* Responsive Styles */
+@media (max-width: 1024px) {
+  header {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+
+  .profile-body {
+    padding-top: 6rem;
+  }
+
+  .profile-body h1 {
+    top: 15%;
+    font-size: 2rem;
+  }
+
+  .profile-body p {
+    top: 35%;
+    font-size: 1.2rem;
+  }
+
+  nav .nav-list {
+    justify-content: center;
+  }
+
+  nav .nav-list li {
+    margin-left: 1rem;
+  }
+}
+
 @media (max-width: 768px) {
   header {
     flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-body {
+    padding-top: 8rem;
+  }
+
+  .profile-body h1 {
+    top: 10%;
+    font-size: 1.8rem;
+  }
+
+  .profile-body p {
+    top: 30%;
+    font-size: 1rem;
   }
 
   nav .nav-list {
@@ -87,70 +183,21 @@ nav .nav-list li a.active {
 }
 
 @media (max-width: 480px) {
-  .profile h1 {
-    font-size: 1.2rem;
+  .profile-body {
+    padding-top: 10rem;
+  }
+
+  .profile-body h1 {
+    top: 5%;
+    font-size: 1.5rem;
+  }
+
+  .profile-body p {
+    top: 25%;
+    font-size: 0.8rem;
   }
 
   nav .nav-list li a {
     font-size: 0.9rem;
   }
-}
-
-
-
-.profile-body {
-  position: relative;
-  text-align: center;
-  color: orangered; /* Text color for h1 and p */
-}
-
-.profile-body h1,
-.profile-body p {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.profile-body h1 {
-  top: 20%;
-  font-size: 2.5rem;
-  padding-top: 3rem
-}
-
-.profile-body p {
-  top: 40%;
-  font-size: 3rem;
-  padding-top: 3rem;
-}
-
-.profile-body img {
-  width: 100%;
-  height: 40vh;
-  object-fit: cover; 
-}
-
-/* Typing Animation */
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-@keyframes blink {
-  50% { border-color: transparent; }
-}
-
-.typed-text {
-  display: inline-block;
-  overflow: hidden;
-  border-right: 0.15em solid red;
-  white-space: nowrap;
-  animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite;
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
-}
-.cursor {
-  display: inline-block;
-  width: 10px;
-  /* background-color: red; */
-  margin-left: 2px;
-  animation: blink 0.75s step-end infinite;
 }
