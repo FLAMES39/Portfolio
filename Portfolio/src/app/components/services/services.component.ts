@@ -1,25 +1,12 @@
-import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-services',
   standalone: true,
-  imports: [CommonModule,RouterModule,ReactiveFormsModule],
+  imports: [],
   templateUrl: './services.component.html',
   styleUrl: './services.component.css'
 })
-export class ServicesComponent implements  OnInit{
+export class ServicesComponent {
 
-  form!:FormGroup
-  constructor( private route:RouterModule){
-
-  }
-  ngOnInit(): void {
-    
-  }
-  onSubmit(){
-
-  }
 }

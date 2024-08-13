@@ -7,11 +7,12 @@
     <div class="contact-container">
         <h2>Get in Touch</h2>
         <p>Feel free to contact me anytime</p>
-        <form (ngSubmit)="onSubmit()" [formGroup]="form">
+        <form     (ngSubmit)="onSubmit()" [formGroup]="form"  action="javascript:void[0]" method="POST" (submit)="send()">
+            <input type="hidden" name="access_key" value="886511b0-b193-4d01-9a47-0340f47bf681">
           <div class="form-group">
-            <input type="text" formControlName="Name" placeholder="Name" required>
-            <div class="error" *ngIf="form.get('Name')?.invalid && form.get('Name')?.touched">
-              <p *ngIf="form.get('Name')?.errors?.['required']">Name is required</p>
+            <input type="text" formControlName="name" placeholder="name" required>
+            <div class="error" *ngIf="form.get('name')?.invalid && form.get('name')?.touched">
+              <p *ngIf="form.get('name')?.errors?.['required']">name is required</p>
             </div>
           </div>
           <div class="form-group">
@@ -33,10 +34,10 @@
               <p *ngIf="form.get('message')?.errors?.['required']">Message is required</p>
             </div>
           </div>
-          <button type="submit" >Send message</button>
+         
+          <button type="submit"[disabled]="!form.value">Send Message</button>
         </form>
       </div>
-      
     
   </footer>
   
