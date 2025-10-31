@@ -1,52 +1,65 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ActivatedRoute, RouterModule } from '@angular/router';
-import { MailService } from '../../Services/mail.service';
-import emailjs from '@emailjs/browser'
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import emailjs from '@emailjs/browser';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule,ReactiveFormsModule,RouterModule],
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })
-export class ContactComponent implements OnInit{
+export class ContactComponent implements OnInit {
 
+  form!: FormGroup;
+  isSending = false;
+  successMessage = '';
+  errorMessage = '';
 
+  constructor(private fb: FormBuilder) {}
 
-  form!:FormGroup
-  constructor( private route:ActivatedRoute, private fb:FormBuilder, private emailService:MailService){
-
-  }
   ngOnInit(): void {
-    this.form=this.fb.group({
-      Name:['',[Validators.required]],
-      email:['',[Validators.required]],
-      Subject:['', [Validators.required]],
-      message:['', [Validators.required]]
-    })
+    this.form = this.fb.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      subject: ['', Validators.required],
+      message: ['', Validators.required]
+    });
+
+    emailjs.init('afyXvAydRYgIjmyjW'); 
   }
-  onSubmit(){
-    if(!this.form.value){
-      
+
+  async onSubmit() {
+    if (this.form.invalid) {
+      this.errorMessage = 'Please fill out all required fields.';
+      return;
     }
-  }
+console.log('Sending with payload:', this.form.value);
 
+    this.isSending = true;
+    this.errorMessage = '';
+    this.successMessage = '';
 
-  async send(){
-    emailjs.init("Wb0RTaUqZLLAeqcyD")
-   let response = await emailjs.send("service_bbtvg72","template_nwfw0is",{
-      from_name: this.form.value.from_name,
-      from_email: this.form.value.from_email,
-      Subjext: this.form.value.Subject,
-      message:this.form.value.message,
+    try {
+      const response = await emailjs.send('service_asfj9ln', 'template_0cfnp7m', {
+        from_name: this.form.value.name,
+        from_email: this.form.value.email,
+        subject: this.form.value.subject,
+        message: this.form.value.message,
       });
 
-      alert("Message sent successfull")
-      this.form.reset();
+      if (response.status === 200) {
+        this.successMessage = 'Message sent successfully!';
+        this.form.reset();
+      } else {
+        this.errorMessage = 'Failed to send message. Please try again.';
+      }
+    } catch (err) {
+      console.error('EmailJS error:', err);
+      this.errorMessage = 'Network or API error. Try again.';
+    } finally {
+      this.isSending = false;
+    }
   }
- 
-
 }

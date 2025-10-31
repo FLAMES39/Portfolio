@@ -1,109 +1,252 @@
-<div class="about-container">
-    <section class="profile-section">
-      <div class="profile-picture">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-0qi5BHam2lgOm9dwn3YRLeAh-xIFOMkj2Q&s" alt="Tony Smith">
-      </div>
-      <!-- <div class="social-icons">
-        <a href="https://facebook.com" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://twitter.com" aria-label="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://instagram.com" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-      </div> -->
-    </section>
-  
-    <section class="details-section">
-      <h1>About Me</h1>
-      <h2>I am a Full Stack MEAN STACK DEVELOPER located in Nairobi</h2>
-      <h1>Christian Abiodun Ademola</h1>
-      <h2>Am a Passionate <span class="highlight">Web Development, Software Development, System Design and Developmment, Database Management and maintanance</span> designer based in <span class="highlight">Nairobi</span></h2>
-      <p>
-        I am a passionate MEAN Stack software Developer  seeking an opportunity to work with  you at your company. I am a passionate software developer and can perform web development and problem solving. I am a highly motivated and results driven software developer with a passion for crafting efficient and scalable web solutions.  I have developed a strong expertise in front-end and back-end technologies.i can thrive in dynamic environment collaborating with cross-functional teams to deliver innovative software  solutions to enhance business growth and user experience.Outside my work I actively participate in tech conferences and coding practices to improve my skills and get to learn new trends in the industry Below i have attached my Curriculum Vitae Cover letter and how i can be contacted. I am ready at any moment. 
-I will be dedicated to serve and achieve the great objectives of the company to the maximum.
-        </p>
-      <div class="details-grid">
-        <div class="detail-item">
-          <span class="detail-title">E-mail</span>
-          <span class="detail-info">christianabiodun2020gmail.com</span>
-        </div>
+<div class="about-wrapper">
+
  
-        <div class="detail-item">
-          <span class="detail-title">Phone</span>
-          <span class="detail-info">+254701043776</span>
-        </div>
-        <div class="detail-item">
-          <span class="detail-title">Residence</span>
-          <span class="detail-info">Nairobi</span>
-        </div>
+  <section class="hero-section">
+    <div class="hero-left">
+      <!-- <h4>Hi! My name is</h4> -->
+      <h1 class="name">Christian Abiodun Ademola</h1>
+      <h2 class="role">Full Stack MEAN STACK DEVELOPER</h2>
+      <p class="hero-description">
+        Highly motivated and professional MEAN Stack Developer with more than 3 years of experience
+        in building cutting-edge web and mobile applications. Passionate about crafting efficient, scalable,
+        and elegant software solutions to enhance business growth and user experience.
+      </p>
+      <button (click)="downloadCV()" class="btn-main">Download CV</button>
+    </div>
 
-        <div class="detail-item">
-          <span class="detail-title">Address</span>
-          <span class="detail-info">Nairobi, KENYA</span>
-        </div>
-        <div class="detail-item">
-          <span class="detail-title">Freelance</span>
-          <span class="detail-info">Available</span>
-        </div>
-      </div>
-      <button class="download-cv-btn"><a href="">Download CV</a></button>
-    </section>
+    <div class="hero-right">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-0qi5BHam2lgOm9dwn3YRLeAh-xIFOMkj2Q&s"
+        alt="Christian Abiodun Ademola"
+      />
+    </div>
+  </section>
 
+<section class="about-section">
+  <!-- LEFT CARD -->
+  <div class="about-card about-left">
+    <h2 class="section-title">About</h2>
+    <div class="underline"></div>
+    <p>
+      I am a passionate MEAN Stack software Developer seeking an opportunity to work with you at
+      your company. I am highly motivated and results-driven with a passion for crafting efficient
+      and scalable web solutions. I thrive in dynamic environments collaborating with cross-functional
+      teams to deliver innovative software that enhances business growth and user experience.
+      Outside of work, I actively participate in tech conferences and coding practices to improve
+      my skills and stay updated with new trends in the industry.
+    </p>
+    <button (click)="downloadCV()" class="btn-secondary">More About Me</button>
   </div>
-  <div class="skills-container">
-    <h2>Tools or Technology</h2>
-    <div class="skills-grid">
-      <div class="skill-item">
-        <i class="fab fa-html5"></i>
-        <span>HTML</span>
-      </div>
-      <div class="skill-item">
-        <i class="fab fa-css3-alt"></i>
-        <span>CSS</span>
-      </div>
-      <div class="skill-item">
-        <i class="fab fa-js-square"></i>
-        <span>JavaScript</span>
-      </div>
-      <div class="skill-item">
-        <i class="fab fa-node"></i>
-        <span>Node.js</span>
-      </div>
-      <div class="skill-item">
-        <i class="fas fa-docker"></i>
-        <span>Docker</span>
-      </div>
-      <div class="skill-item">
-        <i class="fab fa-react"></i>
-        <span>Redux</span>
-      </div>
-      <div class="skill-item">
-        <i class="fab fa-angular"></i>
-        <span>AngularJS</span>
-      </div>
-      <div class="skill-item">
-        <i class="fab fa-js-square"></i>
-        <span>TypeScript</span>
-      </div>
-      <div class="skill-item">
-        <i class="fas fa-database"></i>
-        <span>MSSQL</span>
-      </div>
-      <div class="skill-item">
-        <i class="fab fa-git"></i>
-        <span>GIT</span>
-      </div>
-      <div class="skill-item">
-        <i class="fab fa-aws"></i>
-        <span>AWS</span>
-      </div>
-      <div class="skill-item">
-        <i class="fas fa-cogs"></i>
-        <span>ExpressJS</span>
-      </div>
 
-      <div class="skill-item">
-        <i class="fab fa-npm"></i>
-        <span>npm</span>
-      </div>
+  <!-- MIDDLE CARD -->
+  <div class="about-card about-middle">
+    <h3 class="highlight-title">WHO AM I</h3>
+    <div class="underline"></div>
+    <div class="personal-info">
+      <div class="info-item"><span class="label">E-mail:</span> christianabiodun2020gmail.com</div>
+      <div class="info-item"><span class="label">Phone:</span> +254701043776</div>
+      <div class="info-item"><span class="label">Residence:</span> Nairobi</div>
+      <div class="info-item"><span class="label">Address:</span> Nairobi, KENYA</div>
+      <div class="info-item"><span class="label">Freelance:</span> Available</div>
     </div>
   </div>
+
+  <!-- RIGHT CARD -->
+<!-- RIGHT CARD -->
+<div class="about-card about-right">
+  <h3 class="highlight-title">Qualifications</h3>
+  <div class="underline"></div>
+  <div class="skills-progress">
+    <div class="progress-item" data-percentage="78">
+      <div class="progress-circle">
+        <svg>
+          <circle cx="40" cy="40" r="35"></circle>
+          <circle cx="40" cy="40" r="35"></circle>
+        </svg>
+        <div class="number"><span>85%+</span></div>
+      </div>
+      <p>Frontend</p>
+    </div>
+
+    <div class="progress-item" data-percentage="78">
+      <div class="progress-circle">
+        <svg>
+          <circle cx="40" cy="40" r="35"></circle>
+          <circle cx="40" cy="40" r="35"></circle>
+        </svg>
+        <div class="number"><span>85%+</span></div>
+      </div>
+      <p>Backend</p>
+    </div>
+
+    <div class="progress-item" data-percentage="78">
+      <div class="progress-circle">
+        <svg>
+          <circle cx="40" cy="40" r="35"></circle>
+          <circle cx="40" cy="40" r="35"></circle>
+        </svg>
+        <div class="number"><span>85%+</span></div>
+      </div>
+      <p>Database</p>
+    </div>
+  </div>
+</div>
+
+</section>
+
+
+  <!-- ========================= -->
+  <!-- STATS SECTION -->
+  <!-- ========================= -->
+  <section class="stats-section">
+    <div class="stat-box">
+      <h2>12+</h2>
+      <p>Happy Clients</p>
+    </div>
+    <div class="divider"></div>
+    <div class="stat-box">
+      <h2>30+</h2>
+      <p>Projects Completed</p>
+    </div>
+    <div class="divider"></div>
+    <div class="stat-box">
+      <h2>3+</h2>
+      <p>Years Experience</p>
+    </div>
+  </section>
+
+<!-- ========================= -->
+<!-- SKILLS + EDUCATION/EXPERIENCE/CERTIFICATION SECTION -->
+<!-- ========================= -->
+<div class="skills-education-wrapper">
   
+  <!-- LEFT SIDE: SKILLS -->
+  <div class="skills-section">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-item"><i class="fa-solid fa-code"></i><span>C#</span></div>
+      <div class="skill-item"><i class="fa-brands fa-microsoft"></i><span>.NET</span></div>
+      <div class="skill-item"><i class="fa-solid fa-layer-group"></i><span>Syncfusion</span></div>
+      <div class="skill-item"><i class="fa-solid fa-fire"></i><span>MudBlazor</span></div>
+      <div class="skill-item"><i class="fa-solid fa-database"></i><span>MariaDB</span></div>
+      <div class="skill-item"><i class="fab fa-html5"></i><span>HTML</span></div>
+      <div class="skill-item"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+      <div class="skill-item"><i class="fab fa-js"></i><span>JavaScript</span></div>
+      <div class="skill-item"><i class="fab fa-node"></i><span>Node.js</span></div>
+      <div class="skill-item"><i class="fas fa-docker"></i><span>Docker</span></div>
+      <div class="skill-item"><i class="fab fa-react"></i><span>Redux</span></div>
+      <div class="skill-item"><i class="fab fa-angular"></i><span>AngularJS</span></div>
+      <div class="skill-item"><i class="fab fa-js-square"></i><span>TypeScript</span></div>
+      <div class="skill-item"><i class="fas fa-database"></i><span>MSSQL</span></div>
+      <div class="skill-item"><i class="fab fa-git"></i><span>GIT</span></div>
+      <div class="skill-item"><i class="fab fa-aws"></i><span>AWS</span></div>
+      <div class="skill-item"><i class="fas fa-cogs"></i><span>ExpressJS</span></div>
+      <div class="skill-item"><i class="fab fa-npm"></i><span>npm</span></div>
+    </div>
+  </div>
+
+  <!-- RIGHT SIDE: EDUCATION / EXPERIENCE / CERTIFICATIONS -->
+  <div class="education-experience">
+    <h2 class="journey-title">My Academic & Professional Journey</h2>
+
+    <div class="journey-container">
+
+      <!-- Education Card -->
+      <div class="journey-card scrollable-card">
+        <div class="card-header">
+          <i class="fas fa-graduation-cap"></i>
+          <h3>Education</h3>
+        </div>
+        <div class="journey-item">
+          <div class="journey-info">
+            <h4>Murang’a University of Technology</h4>
+            <p>Bachelor of Applied Science (BASc), Information Technology</p>
+          </div>
+          <span class="year-badge">2020-2024</span>
+        </div>
+      </div>
+
+      <!-- Experience Card -->
+      <div class="journey-card scrollable-card">
+        <div class="card-header">
+          <i class="fas fa-briefcase"></i>
+          <h3>Experience</h3>
+        </div>
+        <div class="journey-item">
+          <div class="journey-info">
+            <h4>Software Developer</h4>
+            <p>SunPro Systems Limited</p>
+          </div>
+          <span class="year-badge">2025 - Present</span>
+        </div>
+        <div class="journey-item">
+          <div class="journey-info">
+            <h4>Freelance MEAN Stack Developer</h4>
+            <p>Self-Employed</p>
+          </div>
+          <span class="year-badge">2024 - 2025</span>
+        </div>
+        <div class="journey-item">
+          <div class="journey-info">
+            <h4>Enumerator</h4>
+            <p>Ministry of Labour & Social Protection</p>
+          </div>
+          <span class="year-badge">2024</span>
+        </div>
+        <div class="journey-item">
+          <div class="journey-info">
+            <h4>Intern</h4>
+            <p>SOS Children’s Villages Kenya</p>
+          </div>
+          <span class="year-badge">2023</span>
+        </div>
+        <div class="journey-item">
+          <div class="journey-info">
+            <h4>Attache</h4>
+            <p>The JITU, Nyeri</p>
+          </div>
+          <span class="year-badge">2023</span>
+        </div>
+      </div>
+
+      <!-- Certifications Card -->
+      <div class="journey-card scrollable-card">
+        <div class="card-header">
+          <i class="fas fa-certificate"></i>
+          <h3>Certifications</h3>
+        </div>
+        <div class="journey-item">
+          <div class="journey-info">
+            <h4>Introduction to Data Science</h4>
+            <p>Cisco Networking Academy</p>
+          </div>
+          <span class="year-badge">2024</span>
+        </div>
+        <div class="journey-item">
+          <div class="journey-info">
+            <h4>Network Addressing & Troubleshooting</h4>
+            <p>Cisco Networking Academy</p>
+          </div>
+          <span class="year-badge">2023</span>
+        </div>
+        <div class="journey-item">
+          <div class="journey-info">
+            <h4>Operating Systems Basics</h4>
+            <p>Cisco Networking Academy</p>
+          </div>
+          <span class="year-badge">2023</span>
+        </div>
+        <div class="journey-item">
+          <div class="journey-info">
+            <h4>Introduction to IoT</h4>
+            <p>Cisco Networking Academy</p>
+          </div>
+          <span class="year-badge">2023</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</div>

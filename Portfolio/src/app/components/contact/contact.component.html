@@ -1,43 +1,107 @@
+<footer class="contact-section">
 
-
-
-
-<footer class="footer">
-
-    <div class="contact-container">
-        <h2>Get in Touch</h2>
-        <p>Feel free to contact me anytime</p>
-        <form     (ngSubmit)="onSubmit()" [formGroup]="form"  action="javascript:void[0]" method="POST" (submit)="send()">
-            <input type="hidden" name="access_key" value="886511b0-b193-4d01-9a47-0340f47bf681">
-          <div class="form-group">
-            <input type="text" formControlName="name" placeholder="name" required>
-            <div class="error" *ngIf="form.get('name')?.invalid && form.get('name')?.touched">
-              <p *ngIf="form.get('name')?.errors?.['required']">name is required</p>
-            </div>
-          </div>
-          <div class="form-group">
-            <input type="email" formControlName="email" placeholder="email" required>
-            <div class="error" *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
-              <p *ngIf="form.get('email')?.errors?.['required']">Email is required</p>
-              <p *ngIf="form.get('email')?.errors?.['email']">Invalid email format</p>
-            </div>
-          </div>
-          <div class="form-group">
-            <input type="text" formControlName="Subject" placeholder="Subject" required>
-            <div class="error" *ngIf="form.get('Subject')?.invalid && form.get('Subject')?.touched">
-              <p *ngIf="form.get('Subject')?.errors?.['required']">Subject is required</p>
-            </div>
-          </div>
-          <div class="form-group">
-            <textarea formControlName="message" placeholder="Message" required></textarea>
-            <div class="error" *ngIf="form.get('message')?.invalid && form.get('message')?.touched">
-              <p *ngIf="form.get('message')?.errors?.['required']">Message is required</p>
-            </div>
-          </div>
-         
-          <button type="submit"[disabled]="!form.value">Send Message</button>
-        </form>
+  <div class="contact-wrapper">
+    <!-- LEFT PANEL: CONTACT INFO -->
+    <div class="contact-info">
+      <div class="info-header">
+        <h4 class="section-label">Contact</h4>
+        <h1 class="title">
+          <span class="highlight">GET IN</span> TOUCH
+        </h1>
+        <p class="intro">
+          I’m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+        </p>
       </div>
-    
-  </footer>
-  
+
+      <div class="info-details">
+        <div class="info-card">
+          <i class="fa-solid fa-location-dot"></i>
+          <div class="info-text">
+            <h5>Location</h5>
+            <p>Nairobi, Kenya</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <i class="fa-solid fa-phone"></i>
+          <div class="info-text">
+            <h5>Call Me</h5>
+            <p>(+254) 701-043-776</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <i class="fa-solid fa-envelope"></i>
+          <div class="info-text">
+            <h5>Email</h5>
+            <p>christianabiodun2020gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT PANEL: CONTACT FORM -->
+    <div class="contact-form">
+      <form
+        (ngSubmit)="onSubmit()"
+        [formGroup]="form"
+        novalidate
+      >
+        <div class="form-group">
+          <input
+            type="text"
+            formControlName="name"
+            placeholder="Your Name"
+            required
+          />
+          <div class="error" *ngIf="form.get('name')?.touched && form.get('name')?.invalid">
+            <p *ngIf="form.get('name')?.errors?.['required']">Name is required</p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input
+            type="email"
+            formControlName="email"
+            placeholder="Your Email"
+            required
+          />
+          <div class="error" *ngIf="form.get('email')?.touched && form.get('email')?.invalid">
+            <p *ngIf="form.get('email')?.errors?.['required']">Email is required</p>
+            <p *ngIf="form.get('email')?.errors?.['email']">Invalid email format</p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input
+            type="text"
+            formControlName="subject"
+            placeholder="Subject"
+            required
+          />
+          <div class="error" *ngIf="form.get('subject')?.touched && form.get('subject')?.invalid">
+            <p *ngIf="form.get('subject')?.errors?.['required']">Subject is required</p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <textarea
+            formControlName="message"
+            placeholder="Your Message Here"
+            required
+          ></textarea>
+          <div class="error" *ngIf="form.get('message')?.touched && form.get('message')?.invalid">
+            <p *ngIf="form.get('message')?.errors?.['required']">Message is required</p>
+          </div>
+        </div>
+
+        <button type="submit" [disabled]="form.invalid || isSending">
+           {{ isSending ? 'Sending...' : 'Send Message' }}
+        </button>
+          <p *ngIf="successMessage" class="success">{{ successMessage }}</p>
+          <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+      </form>
+    </div>
+  </div>
+
+</footer>

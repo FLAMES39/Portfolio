@@ -7,7 +7,7 @@
 
 /* Container Styles */
 .container {
-  width: 98vw;
+  width: 98.5vw;
   background-color: lightgrey;
   position: fixed;
   top: 0;
@@ -19,7 +19,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 5px;
   flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
@@ -45,7 +45,7 @@ header {
   position: relative;
   text-align: center;
   color: orangered; /* Text color for h1 and p */
-  padding-top: 5rem; /* Ensure it's not hidden under the fixed header */
+  padding-top: 2rem; /* Ensure it's not hidden under the fixed header */
 }
 
 .profile-body h1,
@@ -56,7 +56,7 @@ header {
 }
 
 .profile-body h1 {
-  top: 20%;
+  top: 2%;
   font-size: 3rem;
   padding-top: 3rem;
 }
@@ -69,7 +69,7 @@ header {
 
 .profile-body img {
   width: 100%;
-  height: 40vh;
+  height: 5rem;
   object-fit: cover;
 }
 

@@ -1,171 +1,613 @@
-/* General Styles */
-body {
-    font-family: 'Helvetica Neue', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: blue;
-    color: #333;
-  }
-  
-  .about-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    padding: 40px 20px;
-    background-color: lightgray;
+.about-wrapper {
+  background-color: lightgray;
+  font-family: "Poppins", sans-serif;
+  color: #222;
+}
+
+/* ===== HERO SECTION ===== */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 7%;
+  flex-wrap: wrap;
+}
+
+.hero-left {
+  flex: 1 1 50%;
+  max-width: 600px;
+}
+
+.hero-left h4 {
+  font-size: 1rem;
+  color: #555;
+}
+
+.hero-left .name {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #111;
+}
+
+.hero-left .role {
+  color: #e63946;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: #444;
+}
+
+.btn-main {
+  background: #e63946;
+  color: #fff;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.hero-right img {
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== ABOUT SECTION (REFINED) ===== */
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 20px 6%;
+  gap: 15px; /* reduced gap for tighter layout */
+}
+
+.about-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  flex: 1;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+}
+
+.section-title,
+.highlight-title {
+  color: #111;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+
+.underline {
+  width: 40px;
+  height: 3px;
+  background: #e63946;
+  margin-bottom: 20px;
+}
+
+.about-card p {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin-bottom: 25px;
+}
+
+/* Info items improved contrast */
+.info-item {
+  background: #f7f7f7;
+  border-radius: 6px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.label {
+  color: #e63946;
+  font-weight: 600;
+}
+
+/* Skill circles refined */
+.skill-circle {
+  text-align: center;
+  margin: 12px 0;
+}
+
+.circle {
+  width: 65px;
+  height: 65px;
+  border: 4px solid #e63946;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 8px;
+  font-weight: bold;
+  color: #222;
+}
+
+.skill-circle p {
+  font-size: 0.9rem;
+  color: #555;
+}
+.about-card[_ngcontent-ng-c1715775971] {
+    background: #fff;
     border-radius: 10px;
-    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
-  }
-  
-  .profile-section {
+    padding: 30px;
     flex: 1;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    display: flex
+;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: transform 0.3s 
+ease;
+    width: fit-content;
+    height: fit-content;
+}
+
+
+.about-card p {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.btn-secondary {
+  background: #e63946;
+  color: #fff;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 5px;
+  align-self: start;
+  cursor: pointer;
+}
+
+.highlight-title {
+  color: #e63946;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.personal-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-item {
+  background: #f8f8f8;
+  border-radius: 5px;
+  padding: 8px 12px;
+}
+
+.label {
+  color: #e63946;
+  font-weight: 600;
+}
+
+.skill-circle {
+  text-align: center;
+  margin: 15px 0;
+}
+
+
+
+/* ===== STATS SECTION ===== */
+.stats-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  /* background: #fff; */
+  gap: 30px;    margin-left: -10rem;
+
+}
+
+.divider {
+  height: 50px;
+  width: 2px;
+  background: #e63946;
+}
+
+.stat-box {
+  text-align: center;
+}
+
+.stat-box h2 {
+  font-size: 2.4rem;
+  color: #e63946;
+  margin-bottom: 5px;
+}
+
+.stat-box p {
+  color: #333;
+  font-weight: 600;
+}
+
+/* ===== SKILLS SECTION ===== */
+.skills-container {
+  background-color: lightgray;
+  padding: 8px 10%;
+  text-align: center;
+}
+
+.skills-container h2 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+/* ===== FIXED SKILLS & JOURNEY ALIGNMENT ===== */
+
+
+.skills-section {
+  flex: 0 0 55%;
+  max-width: 55%;
+  box-sizing: border-box;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 25px;
+  width: 100%; /* fill the entire width */
+  box-sizing: border-box;
+}
+
+.education-experience {
+  flex: 0 0 45%;
+  max-width: 45%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* scrollable cards now adapt height dynamically */
+.scrollable-card {
+  max-height: 100%;
+  height: 65%;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+.scrollable-card::-webkit-scrollbar {
+  width: 0;
+}
+
+
+.skill-item {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.skill-item i {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  color: #e63946;
+}
+
+.skill-item span {
+  font-weight: 600;
+  color: #222;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== PRO SKILLS ENHANCED (COMPACT + EQUAL HEIGHT) ===== */
+.about-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 20px !important;
+  flex: 0 0 160px; /* Fixed compact width */
+  box-sizing: border-box;
+}
+
+/* Container for circles */
+.skills-progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Each item */
+.progress-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Circle container */
+.progress-circle {
+  position: relative;
+  width: 70px;
+  height: 70px;
+}
+
+/* SVG styling */
+.progress-circle svg {
+  width: 70px;
+  height: 70px;
+  transform: rotate(-90deg);
+}
+
+.progress-circle svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.progress-circle svg circle {
+  fill: none;
+  stroke-width: 8;
+  stroke-linecap: round;
+  cx: 50%;
+  cy: 50%;
+  r: 30; /* this gives a perfect fit */
+}
+
+/* Background circle */
+.progress-circle svg circle:first-child {
+  stroke: #eee;
+}
+
+/* Foreground animated circle */
+.progress-circle svg circle:last-child {
+  stroke: #e63946;
+  stroke-dasharray: 220.2; /* 2πr = 2 * 3.14 * 40 */
+  stroke-dashoffset: 251.2;
+  transition: stroke-dashoffset 1.5s ease-in-out;
+}
+
+
+/* Centered percentage text */
+.progress-circle .number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #222;
+}
+
+/* Skill label */
+.progress-item p {
+  margin-top: 5px;
+  color: #444;
+  font-size: 0.85rem;
+}
+
+/* Make the whole section the same height as other cards */
+.about-section {
+  align-items: stretch;
+}
+
+.about-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+    height: fit-content;
+
+}
+
+/* ===== FIXED SKILLS + EDUCATION/EXPERIENCE LAYOUT ===== */
+.skills-education-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 20px; /* distance between skills grid and cards */
+  margin-top: 40px;
+  padding: 0 8%;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+}
+
+/* --- LEFT: SKILLS --- */
+.skills-section {
+  flex: 0 0 auto;
+  box-sizing: border-box;
+}
+
+/* 4 columns grid of skills (each fixed size) */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* exactly 4 columns */
+  gap: 25px;
+  width: fit-content; /* grid wraps only its content */
+  max-width: 750px; /* controls overall skill area width */
+  box-sizing: border-box;
+}
+
+/* skill card styling stays the same */
+.skill-item {
+  background: #fff;
+  border-radius: 8px;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+}
+
+.skill-item i {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  color: #e63946;
+}
+
+.skill-item span {
+  font-weight: 600;
+  color: #222;
+}
+
+/* --- RIGHT: EDUCATION, EXPERIENCE, CERTIFICATIONS --- */
+.education-experience {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+/* journey layout (3 cards side-by-side) */
+.journey-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  align-items: stretch;
+  height: 100%;
+}
+
+/* individual card */
+.journey-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.scrollable-card {
+  overflow-y: auto;
+  max-height: 100%;
+  scrollbar-width: thin;
+      width: 18rem;
+
+}
+.scrollable-card::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* ===== Header ===== */
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-left: 4px solid #e63946;
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+
+.card-header i {
+  color: #e63946;
+  font-size: 1.3rem;
+}
+
+.card-header h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111;
+}
+
+/* ===== Items ===== */
+.journey-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+}
+
+.journey-info h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 3px;
+}
+
+.journey-info p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* ===== Year Badge ===== */
+.year-badge {
+  background: #e63946;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  width: 10rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+  .skills-education-wrapper {
+    flex-direction: column;
+  }
+
+  .journey-container {
+    grid-template-columns: 1fr;
+  }
+
+  .scrollable-card {
+    max-height: unset;
+    overflow-y: visible;
+  }
+}
+
+
+/* Responsive fine-tune */
+@media (max-width: 992px) {
+  .about-right {
+    flex: 1;
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .hero-section,
+  .about-section {
+    flex-direction: column;
     text-align: center;
   }
 
-  .profile-picture img {
-    padding-top: 4rem;
-    width: 80%;
-    height: 100vh;
-    border-radius: 10px;
-    background-size: cover;
-    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+  .divider {
+    display: none;
   }
-  
-  .social-icons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .social-icons a {
-    margin: 5px 0;
-    font-size: 20px;
-    color: #666;
-    transition: color 0.3s;
-  }
-  
-  .social-icons a:hover {
-    color: #00bfa5;
-  }
-  
-  .details-section {
-    flex: 2;
-    padding: 20px;
-  }
-  
-  .details-section h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-  }
-  
-  .details-section h2 {
-    font-size: 1.3rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
-  }
-  
-  .highlight {
-    color: #ff6b6b;
-  }
-  
-  .details-section p {
-    font-size: 1.3rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
-  }
-  
-  .details-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-  
-  .detail-item {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .detail-title {
-    font-weight: bold;
-    color: #666;
-  }
-  
-  .detail-info {
-    font-size: 1rem;
-    color: #333;
-  }
-  
-  .download-cv-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 20px;
-    background-color: #ff6b6b;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  
-  .download-cv-btn:hover {
-    background-color: #e55b5b;
-  }
-  
-  .skills-container {
-    text-align: center;
-    padding: 20px;
-    background-color: lightgray;
-  }
-  
+
   .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   }
-  
-  .skill-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 2rem;
-    color: #333;
-  }
-  
-  .skill-item i {
-    margin-bottom: 10px;
-    color: #4a90e2; /* Adjust color as needed */
-  }
-  
-  .skill-item span {
-    font-size: 1rem;
-    font-weight: bold;
-  }
-  
-  .skill-item:hover i {
-    color: #007bff; /* Change icon color on hover */
-  }
-  
- 
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .about-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .profile-section,
-    .details-section {
-      flex: 1 1 100%;
-      text-align: center;
-    }
-  
-    .details-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-  
+}
